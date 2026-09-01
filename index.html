@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Palo AI — Automatización inteligente 🚀</title>
+  <title>Palo AI — Automatización inteligente</title>
 
   <meta
     name="description"
-    content="Palo AI ayuda a negocios a ahorrar tiempo automatizando tareas repetitivas con inteligencia artificial."
+    content="Palo AI ayuda a negocios a ahorrar tiempo automatizando tareas repetitivas mediante inteligencia artificial."
   >
 
   <style>
@@ -45,36 +45,36 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(6, 7, 10, 0.9);
+      background: rgba(6, 7, 10, 0.88);
       backdrop-filter: blur(15px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     nav {
-      min-height: 80px;
+      height: 82px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    .logo {
+    .logo-text {
       font-size: 28px;
       font-weight: 800;
-      letter-spacing: -1px;
+      letter-spacing: -1.5px;
     }
 
-    .logo span {
-      color: #9b6cff;
+    .logo-text span {
+      color: #925cff;
     }
 
     .menu {
       display: flex;
-      gap: 35px;
       align-items: center;
+      gap: 38px;
+      color: #b9b9c5;
     }
 
     .menu a {
-      color: #aaaab5;
       transition: 0.2s;
     }
 
@@ -82,149 +82,201 @@
       color: white;
     }
 
-    .btn {
-      display: inline-block;
-      background: linear-gradient(135deg, #8d4fff, #6f6cff);
+    .nav-button {
+      background: linear-gradient(135deg, #914cff, #7358ff);
       padding: 14px 24px;
       border-radius: 12px;
+      color: white;
       font-weight: 700;
-      transition: 0.2s;
-      box-shadow: 0 10px 30px rgba(125, 75, 255, 0.25);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 15px 35px rgba(125, 75, 255, 0.4);
+      box-shadow: 0 0 30px rgba(130, 75, 255, 0.3);
     }
 
     /* HERO */
 
     .hero {
-      min-height: 720px;
+      min-height: 760px;
       display: flex;
       align-items: center;
-      padding: 90px 0;
-      background:
-        radial-gradient(circle at 80% 40%, rgba(111, 70, 255, 0.18), transparent 35%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      right: -150px;
+      top: 100px;
+      background: radial-gradient(
+        circle,
+        rgba(116, 58, 255, 0.22),
+        transparent 70%
+      );
+      pointer-events: none;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+      grid-template-columns: 1fr 1fr;
       gap: 70px;
       align-items: center;
     }
 
     .badge {
       display: inline-block;
-      border: 1px solid rgba(155,108,255,0.5);
-      color: #c4adff;
-      padding: 8px 16px;
-      border-radius: 999px;
-      margin-bottom: 25px;
+      padding: 9px 17px;
+      border: 1px solid rgba(151, 92, 255, 0.6);
+      border-radius: 30px;
+      color: #c7aaff;
       font-size: 14px;
+      margin-bottom: 28px;
+      background: rgba(115, 69, 255, 0.06);
     }
 
     h1 {
-      font-size: clamp(48px, 7vw, 82px);
+      font-size: clamp(54px, 7vw, 88px);
       line-height: 0.98;
-      letter-spacing: -4px;
+      letter-spacing: -5px;
       margin-bottom: 30px;
     }
 
     h1 span {
-      color: #9b72ff;
+      color: #955cff;
     }
 
     .hero-text {
-      color: #a8a8b2;
       font-size: 20px;
+      color: #a9a9b5;
       max-width: 650px;
-      margin-bottom: 35px;
+      margin-bottom: 38px;
     }
 
-    .hero-buttons {
+    .buttons {
       display: flex;
-      gap: 15px;
+      gap: 16px;
       flex-wrap: wrap;
     }
 
-    .btn-secondary {
-      display: inline-block;
-      padding: 14px 24px;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 12px;
-      color: #ddd;
+    .primary-button {
+      background: linear-gradient(135deg, #914cff, #7358ff);
+      padding: 17px 27px;
+      border-radius: 13px;
+      font-weight: 700;
+      font-size: 17px;
+      box-shadow: 0 0 35px rgba(132, 77, 255, 0.3);
+      transition: 0.2s;
     }
 
-    /* IMAGE */
+    .primary-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 45px rgba(132, 77, 255, 0.5);
+    }
 
-    .hero-image {
-      min-height: 430px;
+    .secondary-button {
+      padding: 17px 27px;
+      border-radius: 13px;
+      border: 1px solid rgba(255,255,255,0.16);
+      color: #dddde5;
+      font-weight: 600;
+    }
+
+    /* LOGO CARD */
+
+    .logo-card {
+      height: 510px;
       border-radius: 30px;
       border: 1px solid rgba(255,255,255,0.12);
-      background: linear-gradient(
-        145deg,
-        rgba(30,25,45,0.9),
-        rgba(10,10,15,0.95)
-      );
+      background:
+        radial-gradient(
+          circle at 50% 40%,
+          rgba(132, 76, 255, 0.18),
+          transparent 50%
+        ),
+        #101016;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+      box-shadow:
+        0 30px 100px rgba(0,0,0,0.5),
+        inset 0 0 60px rgba(130,70,255,0.05);
     }
 
-    .hero-image img {
-      width: 100%;
-      height: 100%;
-      max-height: 430px;
-      object-fit: contain;
+    .logo-card img {
+      width: 78%;
+      max-width: 470px;
+      border-radius: 10px;
       display: block;
     }
 
-    /* SECTIONS */
+    /* SECTION */
 
     section {
-      padding: 100px 0;
+      padding: 110px 0;
     }
 
     .section-title {
       text-align: center;
-      font-size: 48px;
-      letter-spacing: -2px;
-      margin-bottom: 15px;
+      max-width: 720px;
+      margin: 0 auto 65px;
     }
 
-    .section-subtitle {
-      text-align: center;
+    .section-title h2 {
+      font-size: 48px;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 18px;
+    }
+
+    .section-title p {
       color: #9999a5;
-      max-width: 650px;
-      margin: 0 auto 55px;
       font-size: 18px;
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: #090a0f;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 22px;
     }
 
     .card {
-      padding: 30px;
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 20px;
-      background: rgba(255,255,255,0.025);
+      padding: 32px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.09);
+      background: #101117;
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(142, 82, 255, 0.5);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
     }
 
     .icon {
-      font-size: 35px;
-      margin-bottom: 20px;
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      background: rgba(137, 79, 255, 0.13);
+      font-size: 25px;
+      margin-bottom: 22px;
     }
 
     .card h3 {
-      font-size: 22px;
-      margin-bottom: 10px;
+      font-size: 23px;
+      margin-bottom: 12px;
     }
 
     .card p {
@@ -245,67 +297,128 @@
     }
 
     .number {
-      width: 55px;
-      height: 55px;
+      width: 58px;
+      height: 58px;
       border-radius: 50%;
-      background: #17121f;
-      border: 1px solid #8d62ff;
+      margin: 0 auto 22px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 20px;
-      color: #b99cff;
+      background: linear-gradient(135deg, #914cff, #7358ff);
+      font-size: 21px;
       font-weight: 800;
-      font-size: 20px;
+    }
+
+    .step h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .step p {
+      color: #9999a5;
+    }
+
+    /* EXAMPLES */
+
+    .examples {
+      background: #090a0f;
+    }
+
+    .example-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .example {
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 20px;
+      background: #101117;
+    }
+
+    .example strong {
+      display: block;
+      color: #a678ff;
+      margin-bottom: 10px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .example h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .example p {
+      color: #9999a5;
     }
 
     /* CTA */
 
     .cta {
       text-align: center;
-      padding: 90px 30px;
+    }
+
+    .cta-box {
+      padding: 80px 30px;
       border-radius: 30px;
+      border: 1px solid rgba(144, 82, 255, 0.25);
       background:
-        radial-gradient(circle at center, rgba(125,75,255,0.25), transparent 60%),
-        #111018;
-      border: 1px solid rgba(255,255,255,0.1);
+        radial-gradient(
+          circle at center,
+          rgba(121, 65, 255, 0.17),
+          transparent 65%
+        ),
+        #101017;
     }
 
     .cta h2 {
-      font-size: clamp(38px, 5vw, 60px);
+      font-size: clamp(38px, 6vw, 62px);
+      letter-spacing: -3px;
       margin-bottom: 20px;
-      letter-spacing: -2px;
     }
 
     .cta p {
-      color: #aaaab5;
-      font-size: 19px;
       max-width: 650px;
-      margin: 0 auto 30px;
+      margin: 0 auto 32px;
+      color: #a4a4af;
+      font-size: 18px;
     }
 
     /* FOOTER */
 
     footer {
-      padding: 40px 0;
+      padding: 45px 0;
       border-top: 1px solid rgba(255,255,255,0.08);
-      color: #777783;
-      text-align: center;
+      color: #777782;
     }
 
-    /* MOBILE */
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-    @media (max-width: 800px) {
+    /* RESPONSIVE */
+
+    @media (max-width: 850px) {
+
       .menu {
         display: none;
+      }
+
+      .hero {
+        padding: 70px 0;
       }
 
       .hero-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        padding: 60px 0;
+      .logo-card {
+        height: 400px;
       }
 
       .cards,
@@ -313,12 +426,43 @@
         grid-template-columns: 1fr;
       }
 
-      h1 {
-        letter-spacing: -2px;
+      .example-box {
+        grid-template-columns: 1fr;
       }
 
-      .hero-image {
-        min-height: 300px;
+      h1 {
+        letter-spacing: -3px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      nav {
+        height: 70px;
+      }
+
+      .nav-button {
+        padding: 11px 17px;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .logo-card {
+        height: 320px;
+      }
+
+      .logo-card img {
+        width: 85%;
+      }
+
+      section {
+        padding: 75px 0;
       }
     }
   </style>
@@ -331,14 +475,21 @@
   <header>
     <div class="container">
       <nav>
-        <a href="#" class="logo">Palo<span>AI</span></a>
+
+        <a href="#" class="logo-text">
+          Palo<span>AI</span>
+        </a>
 
         <div class="menu">
           <a href="#servicios">Servicios</a>
           <a href="#ejemplos">Ejemplos</a>
           <a href="#como-funciona">Cómo funciona</a>
-          <a href="#contacto" class="btn">Empezar</a>
         </div>
+
+        <a href="#contacto" class="nav-button">
+          Empezar
+        </a>
+
       </nav>
     </div>
   </header>
@@ -349,16 +500,22 @@
   <main>
 
     <section class="hero">
+
       <div class="container">
+
         <div class="hero-grid">
 
           <div>
+
             <div class="badge">
               ✦ Automatización inteligente
             </div>
 
             <h1>
-              Automatiza lo repetitivo.
+              Automatiza lo
+              <br>
+              repetitivo.
+              <br>
               <span>Escala lo importante.</span>
             </h1>
 
@@ -368,213 +525,321 @@
               mediante automatización e inteligencia artificial.
             </p>
 
-            <div class="hero-buttons">
-              <a
-                href="#contacto"
-                class="btn"
-              >
+            <div class="buttons">
+
+              <a href="#contacto" class="primary-button">
                 Quiero automatizar mi negocio
               </a>
 
-              <a
-                href="#servicios"
-                class="btn-secondary"
-              >
+              <a href="#servicios" class="secondary-button">
                 Ver soluciones
               </a>
+
             </div>
+
           </div>
 
 
-          <!-- IMAGEN -->
-          <div class="hero-image">
+          <!-- AQUÍ SE UTILIZA TU LOGO -->
+
+          <div class="logo-card">
+
             <img
               src="logo.png"
-              alt="Palo AI"
+              alt="Palo AI - Automatización inteligente"
             >
+
           </div>
 
         </div>
+
       </div>
+
     </section>
 
 
     <!-- SERVICIOS -->
 
-    <section id="servicios">
+    <section class="services" id="servicios">
+
       <div class="container">
 
-        <h2 class="section-title">
-          Automatiza tu negocio
-        </h2>
+        <div class="section-title">
 
-        <p class="section-subtitle">
-          Convertimos tareas repetitivas en procesos automáticos
-          para que puedas dedicar tu tiempo a lo que realmente importa.
-        </p>
+          <h2>
+            Menos trabajo manual.
+            <br>
+            Más tiempo para crecer.
+          </h2>
 
-        <div class="cards">
-
-          <div class="card">
-            <div class="icon">🤖</div>
-            <h3>Atención automática</h3>
-            <p>
-              Responde preguntas frecuentes de tus clientes
-              automáticamente y sin perder oportunidades.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="icon">📅</div>
-            <h3>Reservas y citas</h3>
-            <p>
-              Automatiza reservas, confirmaciones y recordatorios
-              para reducir trabajo manual.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="icon">🔄</div>
-            <h3>Procesos automáticos</h3>
-            <p>
-              Conecta tus herramientas y haz que diferentes tareas
-              trabajen automáticamente entre sí.
-            </p>
-          </div>
+          <p>
+            Automatizamos las tareas que más tiempo consumen
+            en tu negocio.
+          </p>
 
         </div>
-      </div>
-    </section>
 
-
-    <!-- EJEMPLOS -->
-
-    <section id="ejemplos">
-      <div class="container">
-
-        <h2 class="section-title">
-          ¿Qué podemos automatizar?
-        </h2>
-
-        <p class="section-subtitle">
-          Diseñamos sistemas adaptados a las necesidades de cada negocio.
-        </p>
 
         <div class="cards">
 
           <div class="card">
-            <div class="icon">💬</div>
-            <h3>WhatsApp</h3>
-            <p>
-              Respuestas automáticas, captación de clientes y
-              seguimiento de conversaciones.
-            </p>
-          </div>
 
-          <div class="card">
-            <div class="icon">📧</div>
-            <h3>Email</h3>
-            <p>
-              Automatización de mensajes, seguimientos y
-              comunicaciones con clientes.
-            </p>
-          </div>
-
-          <div class="card">
             <div class="icon">⚡</div>
-            <h3>Tareas repetitivas</h3>
+
+            <h3>
+              Automatización
+            </h3>
+
             <p>
-              Eliminamos procesos manuales que consumen horas
-              cada semana.
+              Conectamos tus herramientas para que las tareas
+              repetitivas se hagan automáticamente.
             </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <div class="icon">🤖</div>
+
+            <h3>
+              Inteligencia artificial
+            </h3>
+
+            <p>
+              Utilizamos IA para responder, clasificar información
+              y acelerar procesos de tu negocio.
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <div class="icon">📈</div>
+
+            <h3>
+              Más productividad
+            </h3>
+
+            <p>
+              Reduce horas de trabajo manual y dedica más tiempo
+              a las tareas que realmente importan.
+            </p>
+
           </div>
 
         </div>
+
       </div>
+
     </section>
 
 
     <!-- COMO FUNCIONA -->
 
     <section id="como-funciona">
+
       <div class="container">
 
-        <h2 class="section-title">
-          Así funciona Palo AI
-        </h2>
+        <div class="section-title">
 
-        <p class="section-subtitle">
-          Nos encargamos de crear el sistema para que tú puedas
-          concentrarte en tu negocio.
-        </p>
+          <h2>
+            Así de sencillo.
+          </h2>
+
+          <p>
+            Nosotros nos encargamos de la parte técnica.
+          </p>
+
+        </div>
+
 
         <div class="steps">
 
           <div class="step">
-            <div class="number">1</div>
-            <h3>Analizamos</h3>
+
+            <div class="number">
+              1
+            </div>
+
+            <h3>
+              Analizamos
+            </h3>
+
             <p>
-              Detectamos las tareas que más tiempo consumen
-              en tu negocio.
+              Vemos qué tareas de tu negocio son repetitivas
+              y pueden automatizarse.
             </p>
+
           </div>
 
-          <div class="step">
-            <div class="number">2</div>
-            <h3>Automatizamos</h3>
-            <p>
-              Diseñamos y configuramos una solución adaptada
-              a tus necesidades.
-            </p>
-          </div>
 
           <div class="step">
-            <div class="number">3</div>
-            <h3>Escalas</h3>
+
+            <div class="number">
+              2
+            </div>
+
+            <h3>
+              Automatizamos
+            </h3>
+
             <p>
-              El sistema trabaja automáticamente mientras tú
-              te concentras en hacer crecer el negocio.
+              Diseñamos e instalamos una automatización
+              adaptada a tus necesidades.
             </p>
+
+          </div>
+
+
+          <div class="step">
+
+            <div class="number">
+              3
+            </div>
+
+            <h3>
+              Tú haces crecer el negocio
+            </h3>
+
+            <p>
+              El sistema trabaja automáticamente mientras
+              tú te concentras en tus clientes.
+            </p>
+
           </div>
 
         </div>
+
       </div>
+
     </section>
 
 
-    <!-- CONTACTO -->
+    <!-- EJEMPLOS -->
 
-    <section id="contacto">
+    <section class="examples" id="ejemplos">
+
       <div class="container">
 
-        <div class="cta">
+        <div class="section-title">
 
           <h2>
-            ¿Listo para automatizar?
+            ¿Qué podemos automatizar?
           </h2>
 
           <p>
-            Cuéntanos qué tareas te hacen perder tiempo y
-            estudiaremos cómo podemos automatizarlas.
+            Algunos ejemplos de procesos que podemos convertir
+            en automáticos.
           </p>
 
-          <!--
-          IMPORTANTE:
-          Sustituye el número de ejemplo por tu número
-          de WhatsApp cuando lo tengamos confirmado.
-          -->
+        </div>
+
+
+        <div class="example-box">
+
+          <div class="example">
+
+            <strong>Clientes</strong>
+
+            <h3>
+              Respuesta automática
+            </h3>
+
+            <p>
+              Cuando un cliente contacta, puede recibir
+              automáticamente una respuesta y quedar registrado.
+            </p>
+
+          </div>
+
+
+          <div class="example">
+
+            <strong>Ventas</strong>
+
+            <h3>
+              Gestión de leads
+            </h3>
+
+            <p>
+              Los nuevos clientes potenciales pueden organizarse
+              automáticamente y enviarse al sistema correspondiente.
+            </p>
+
+          </div>
+
+
+          <div class="example">
+
+            <strong>Administración</strong>
+
+            <h3>
+              Tareas repetitivas
+            </h3>
+
+            <p>
+              Automatizamos procesos que normalmente requieren
+              copiar datos, enviar mensajes o actualizar información.
+            </p>
+
+          </div>
+
+
+          <div class="example">
+
+            <strong>Contenido</strong>
+
+            <h3>
+              Procesos con IA
+            </h3>
+
+            <p>
+              La inteligencia artificial puede ayudarte a procesar
+              información y generar contenido automáticamente.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta" id="contacto">
+
+      <div class="container">
+
+        <div class="cta-box">
+
+          <h2>
+            ¿Preparado para
+            <span style="color:#955cff;">
+              automatizar?
+            </span>
+          </h2>
+
+          <p>
+            Cuéntanos qué tareas te quitan más tiempo
+            y estudiaremos cómo podemos automatizarlas.
+          </p>
 
           <a
-            href="https://wa.me/TU_NUMERO"
-            class="btn"
-            target="_blank"
+            href="mailto:contacto@paloai.es"
+            class="primary-button"
           >
-            💬 Hablar por WhatsApp
+            Quiero automatizar mi negocio
           </a>
 
         </div>
 
       </div>
+
     </section>
 
   </main>
@@ -583,11 +848,25 @@
   <!-- FOOTER -->
 
   <footer>
+
     <div class="container">
-      <p>
-        © 2026 Palo AI — Automatización inteligente 🚀
-      </p>
+
+      <div class="footer-content">
+
+        <div>
+          <strong>PaloAI</strong>
+          <br>
+          Automatización inteligente.
+        </div>
+
+        <div>
+          © 2026 PaloAI. Todos los derechos reservados.
+        </div>
+
+      </div>
+
     </div>
+
   </footer>
 
 </body>
