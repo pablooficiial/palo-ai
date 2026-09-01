@@ -39,8 +39,6 @@
       margin: auto;
     }
 
-    /* HEADER */
-
     header {
       position: sticky;
       top: 0;
@@ -91,8 +89,6 @@
       cursor: pointer;
       box-shadow: 0 10px 30px rgba(125, 75, 255, 0.25);
     }
-
-    /* HERO */
 
     .hero {
       min-height: 720px;
@@ -156,8 +152,6 @@
       color: #ddd;
     }
 
-    /* LOGO */
-
     .logo-card {
       min-height: 430px;
       border-radius: 30px;
@@ -180,8 +174,6 @@
       max-width: 450px;
       display: block;
     }
-
-    /* SECTIONS */
 
     section {
       padding: 100px 0;
@@ -211,8 +203,6 @@
       font-size: 18px;
     }
 
-    /* CARDS */
-
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -239,8 +229,6 @@
     .card p {
       color: #9999a5;
     }
-
-    /* STEPS */
 
     .steps {
       display: grid;
@@ -276,7 +264,7 @@
       color: #9999a5;
     }
 
-    /* CONTACTO */
+    /* FORMULARIO DE CONTACTO */
 
     .contact-section {
       background: #090a0f;
@@ -323,8 +311,6 @@
       text-align: center;
     }
 
-    /* CTA */
-
     .cta {
       text-align: center;
     }
@@ -355,16 +341,12 @@
       margin: 0 auto 30px;
     }
 
-    /* FOOTER */
-
     footer {
       padding: 40px 0;
       border-top: 1px solid rgba(255,255,255,0.08);
       color: #777783;
       text-align: center;
     }
-
-    /* MOBILE */
 
     @media (max-width: 800px) {
 
@@ -398,9 +380,10 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- CABECERA -->
 
   <header>
+
     <div class="container">
 
       <nav>
@@ -422,10 +405,11 @@
       </nav>
 
     </div>
+
   </header>
 
 
-  <!-- HERO -->
+  <!-- PORTADA -->
 
   <main>
 
@@ -467,7 +451,7 @@
           </div>
 
 
-          <!-- TU LOGO -->
+          <!-- LOGO -->
 
           <div class="logo-card">
 
@@ -662,10 +646,8 @@
         </div>
 
 
-        <!-- FORMULARIO -->
-
         <form
-          action="https://formsubmit.co/TU_EMAIL"
+          action="https://formsubmit.co/pablooficialrh@gmail.com"
           method="POST"
           class="contact-form"
         >
@@ -716,12 +698,20 @@
             value="false"
           >
 
+          <input
+            type="hidden"
+            name="_template"
+            value="table"
+          >
+
+
           <button
             type="submit"
             class="form-button"
           >
             Quiero automatizar mi negocio 🚀
           </button>
+
 
           <p class="privacy-text">
             Al enviar este formulario aceptas que podamos contactar
@@ -768,7 +758,7 @@
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- PIE -->
 
   <footer>
 
